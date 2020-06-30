@@ -1,0 +1,11 @@
+{
+  "name": "@ltspkg/types.kityminder-core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": "chunsen",
+  "license": "MIT"
+}

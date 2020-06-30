@@ -1,0 +1,20 @@
+{
+  "name": "@ltspkg/types.kity",
+  "version": "1.0.0",
+  "description": "The typings for kity library",
+  "main": "",
+  "types": "./index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "kity",
+    "typings",
+    "kity-typings",
+    "types",
+    "typescript"
+  ],
+  "author": "chunsen",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "next"
+  }
+}
