@@ -15,6 +15,6 @@
   "author": "chunsen",
   "license": "MIT",
   "dependencies": {
-    "typescript": "next"
+    "typescript": "^2.4.0"
   }
 }

@@ -20,4 +20,14 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ***************************************************************************** */
 
-/// <reference path="./lib/kity.d.ts" />
+declare namespace kity {
+  interface Group extends ShapeContainer {}
+
+  /**
+   * @class Group
+   * @description shape 分组
+   */
+  class Group extends Shape {
+
+  }
+}

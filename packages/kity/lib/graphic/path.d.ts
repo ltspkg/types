@@ -70,7 +70,7 @@ declare namespace kity {
      * @constructor
      * @param  {Path} path 路径
      */
-    new (path: Path);
+    new (path: Path): PathDrawer;
 
     /***
      * @method getPath()
