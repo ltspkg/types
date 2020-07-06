@@ -1,11 +1,22 @@
 {
   "name": "@ltspkg/types.kityminder-core",
   "version": "1.0.0",
-  "description": "",
+  "description": "The typings for kityminder-core library",
   "main": "",
-  "scripts": {
-  },
-  "keywords": [],
+  "types": "./index.d.ts",
+  "scripts": {},
+  "keywords": [
+    "kityminder",
+    "kityminder-core",
+    "typings",
+    "kity-typings",
+    "types",
+    "typescript"
+  ],
   "author": "chunsen",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@ltspkg/types.kity": "file:../kity",
+    "typescript": "^2.4.0"
+  }
 }
