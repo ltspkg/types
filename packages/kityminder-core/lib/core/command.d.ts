@@ -20,33 +20,59 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ***************************************************************************** */
 
-/// <reference types="typescript" />
+declare namespace kityminder {
+  type CommandStateNormal = 0;
+  type CommandStateDisabled = -1;
+  type CommandStateActived = 1;
+  type CommandState =
+    CommandStateNormal |
+    CommandStateDisabled |
+    CommandStateActived;
 
-// core
-/// <reference path="./core/browser.d.ts" />
-/// <reference path="./core/class.d.ts" />
-/// <reference path="./core/utils.d.ts" />
+  /**
+   * @class Command
+   * @description 表示一个命令，包含命令的查询及执行
+   */
+  class Command {
+    /**
+     * @method execute()
+     * @description minder执行命令
+     *
+     * @param { Minder } minder
+     * @param { any[] } args
+     */
+    execute(minder: Minder, ...args: any[]): Error;
 
-// graphic
-/// <reference path="./graphic/box.d.ts" />
-/// <reference path="./graphic/color.d.ts" />
-/// <reference path="./graphic/container.d.ts" />
-/// <reference path="./graphic/data.d.ts" />
-/// <reference path="./graphic/eventhandler.d.ts" />
-/// <reference path="./graphic/geometry.d.ts" />
-/// <reference path="./graphic/group.d.ts" />
-/// <reference path="./graphic/matrix.d.ts" />
-/// <reference path="./graphic/paper.d.ts" />
-/// <reference path="./graphic/path.d.ts" />
-/// <reference path="./graphic/pen.d.ts" />
-/// <reference path="./graphic/point.d.ts" />
-/// <reference path="./graphic/rect.d.ts" />
-/// <reference path="./graphic/shape.d.ts" />
-/// <reference path="./graphic/shapecontainer.d.ts" />
-/// <reference path="./graphic/styled.d.ts" />
-/// <reference path="./graphic/viewbox.d.ts" />
+    /**
+     * @method setContentChanged()
+     * @description 设置内容是否变化
+     *
+     * @param { boolean } changed
+     */
+    setContentChanged(changed: boolean): void;
 
-/// kity 版本号
-declare namespace kity {
-  const version: string;
+    /**
+     * @method isContentChanged()
+     * @description 返回内容是否变化
+     */
+    isContentChanged(): boolean;
+
+    /**
+     * @method queryState()
+     * @description 查询状态，默认正常
+     */
+    queryState(): CommandStateNormal;
+
+    /**
+     * @method queryValue()
+     * @description 查询值
+     */
+    queryValue(): 0;
+
+    /**
+     * @method isNeedUndo()
+     * @description 是否需要撤销
+     */
+    isNeedUndo(): boolean;
+  }
 }

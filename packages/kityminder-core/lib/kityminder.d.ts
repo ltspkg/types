@@ -24,8 +24,12 @@ SOFTWARE.
 /// <reference types="@ltspkg/types.kity" />
 
 // core
+/// <reference path="./core/command.d.ts" />
+/// <reference path="./core/event.d.ts" />
 /// <reference path="./core/minder.d.ts" />
+/// <reference path="./core/module.d.ts" />
 /// <reference path="./core/node.d.ts" />
+/// <reference path="./core/theme.d.ts" />
 
 /// kityminder 版本号
 declare namespace kityminder {
